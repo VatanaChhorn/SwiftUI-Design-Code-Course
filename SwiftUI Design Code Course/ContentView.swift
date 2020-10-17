@@ -8,14 +8,165 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var show = false
+    @State var viewState = CGSize.zero
+    @State var showCard = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            
+            TitleView()
+                .blur(radius: self.show ? 20 : 0 )
+                .opacity(self.showCard ? 0.4 : 1 )
+                .offset(y: self.showCard ? -200 : 0)
+                .animation(Animation.default.delay(0.1)
+                           //                            .speed(2).repeatCount(3, autoreverses: false)
+                )
+            
+            BackCardView()
+                .frame(width: 340, height: 220)
+                .background(Color("card4"))
+                .cornerRadius(20)
+                .shadow(radius: 20)
+                .offset(x: 0, y: self.showCard ? -180 : -40)
+                .offset(x: viewState.width, y: viewState.height)
+                .scaleEffect( showCard ? 1 : 0.9)
+                .rotationEffect(.degrees( self.show ? 0 : 10))
+                .rotationEffect(.degrees(self.showCard ? -10 : +10 ))
+                .rotation3DEffect(
+                    .degrees(showCard ? 0 :  10),
+                    axis: (x: 10.0, y: 0.0, z: 0.0))
+                .blendMode(.hardLight)
+                .animation(.easeInOut(duration: 0.5))
+            
+            
+            BackCardView()
+                .frame(width: 340, height: 220)
+                .background(Color("card3"))
+                .cornerRadius(20)
+                .shadow(radius: 20)
+                .offset(x: 0, y: self.showCard ? -140 : -20)
+                .offset(x: viewState.width, y: viewState.height)
+                .scaleEffect( showCard ? 1 : 0.95)
+                .rotationEffect(Angle(degrees: self.show ? 0 : 5))
+                .rotationEffect(.degrees(self.showCard ? -5 : +5 ))
+                .rotation3DEffect(
+                    .degrees(showCard ? 0 :  5),
+                    axis: (x: 10.0, y: 0.0, z: 0.0))
+                .blendMode(.hardLight)
+                .animation(.easeInOut(duration: 0.3))
+            
+            cardView()
+                .frame(width:showCard ? 375 :  340 , height: 220)
+                .background(Color.black)
+//                .cornerRadius(20)
+                .clipShape(RoundedRectangle(cornerRadius: showCard ? 30 :  20, style: .continuous))
+                .shadow(radius: 20)
+                .blendMode(.hardLight)
+                .offset(x: viewState.width, y: viewState.height)
+                .offset( y: self.showCard ? -100 : 0)
+                .animation(.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0))
+                .onTapGesture {
+//                    self.show.toggle()
+                    self.showCard.toggle()
+                }
+                .gesture(
+                    DragGesture().onChanged {
+                        value in
+                        self.viewState = value.translation
+                        self.show = true
+                    }
+                    
+                    .onEnded({ (value) in
+                        self.viewState = .zero
+                        self.show = false
+                    })
+                )
+            
+            BottomCardView()
+                .offset(x: 0, y: self.showCard ? 360 :  1000)
+                .blur(radius: self.show ? 20 : 0 )
+                .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
+            
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct cardView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                VStack (alignment: .leading) {
+                    Text("UI Design")
+                        .font(Font.title.smallCaps())
+                        .foregroundColor(.white)
+                    Text("Certificate")
+                        .font(.subheadline)
+                        .foregroundColor(Color("accent"))
+                }
+                Spacer()
+                Image(uiImage: #imageLiteral(resourceName: "Logo1"))
+            }
+            .padding()
+            Spacer()
+            Image(uiImage: #imageLiteral(resourceName: "Card1"))
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 300, height: 110, alignment: .top)
+        }
+    }
+}
+
+struct BackCardView: View {
+    var body: some View {
+        VStack {
+            Spacer()
+        }
+        
+    }
+}
+
+struct TitleView: View {
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Certificate")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                Spacer()
+            }
+            .padding()
+            Image("Background1")
+            Spacer()
+        }
+    }
+}
+
+struct BottomCardView: View {
+    var body: some View {
+        VStack (spacing: 20) {
+            Rectangle()
+                .frame(width: 40, height: 5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .cornerRadius(3)
+                .opacity(0.1)
+            Text("This certificate is proof that Vatana has achieved the UI Design Course.")
+                .multilineTextAlignment(.center)
+                .font(.subheadline)
+                .lineSpacing(4)
+            
+            Spacer()
+        }
+        .padding(.top, 10).padding(.horizontal, 20)
+        .background(Color.white)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .cornerRadius(30)
+        .shadow(radius: 20 )
     }
 }
