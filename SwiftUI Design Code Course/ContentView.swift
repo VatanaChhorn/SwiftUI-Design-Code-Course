@@ -12,6 +12,7 @@ struct ContentView: View {
     @State var show = false
     @State var viewState = CGSize.zero
     @State var showCard = false
+    @State var bottomCardShow = CGSize.zero
     
     var body: some View {
         ZStack {
@@ -60,7 +61,7 @@ struct ContentView: View {
             cardView()
                 .frame(width:showCard ? 375 :  340 , height: 220)
                 .background(Color.black)
-//                .cornerRadius(20)
+                //                .cornerRadius(20)
                 .clipShape(RoundedRectangle(cornerRadius: showCard ? 30 :  20, style: .continuous))
                 .shadow(radius: 20)
                 .blendMode(.hardLight)
@@ -68,7 +69,7 @@ struct ContentView: View {
                 .offset( y: self.showCard ? -100 : 0)
                 .animation(.spring(response: 0.3, dampingFraction: 0.6, blendDuration: 0))
                 .onTapGesture {
-//                    self.show.toggle()
+                    //                    self.show.toggle()
                     self.showCard.toggle()
                 }
                 .gesture(
@@ -86,8 +87,31 @@ struct ContentView: View {
             
             BottomCardView()
                 .offset(x: 0, y: self.showCard ? 360 :  1000)
+                .offset(y: bottomCardShow.height)
                 .blur(radius: self.show ? 20 : 0 )
                 .animation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 0.8))
+                .gesture(
+                    DragGesture()
+                        .onChanged({ (value) in
+                            self.bottomCardShow = value.translation
+                            if bottomCardShow.height < -300 {
+                                self.bottomCardShow.height = -300
+                            }
+                        })
+                        .onEnded({ (value) in
+                            
+                            if bottomCardShow.height < -200 {
+                                bottomCardShow.height = -300
+                            } else if bottomCardShow.height > 200 {
+                                self.showCard = false
+                                self.bottomCardShow = .zero
+                            }
+                            else {
+                                self.bottomCardShow = .zero
+                            }
+                        })
+                )
+            
             
         }
     }
