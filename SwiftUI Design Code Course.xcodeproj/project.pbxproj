@@ -13,6 +13,7 @@
 		355702F8253B011B00F90B4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355702F7253B011B00F90B4F /* Preview Assets.xcassets */; };
 		35570303253B011C00F90B4F /* SwiftUI_Design_Code_CourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35570302253B011C00F90B4F /* SwiftUI_Design_Code_CourseTests.swift */; };
 		3557030E253B011C00F90B4F /* SwiftUI_Design_Code_CourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557030D253B011C00F90B4F /* SwiftUI_Design_Code_CourseUITests.swift */; };
+		35A68D92253DF55300E75179 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A68D91253DF55300E75179 /* Home.swift */; };
 		35B869BD253D9DBF0021B99A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B869BC253D9DBF0021B99A /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		35570309253B011C00F90B4F /* SwiftUI Design Code CourseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI Design Code CourseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3557030D253B011C00F90B4F /* SwiftUI_Design_Code_CourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Design_Code_CourseUITests.swift; sourceTree = "<group>"; };
 		3557030F253B011C00F90B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35A68D91253DF55300E75179 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		35B869BC253D9DBF0021B99A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +79,6 @@
 		355702E4253B011700F90B4F = {
 			isa = PBXGroup;
 			children = (
-				35B869BC253D9DBF0021B99A /* MenuView.swift */,
 				355702EF253B011700F90B4F /* SwiftUI Design Code Course */,
 				35570301253B011C00F90B4F /* SwiftUI Design Code CourseTests */,
 				3557030C253B011C00F90B4F /* SwiftUI Design Code CourseUITests */,
@@ -100,6 +101,8 @@
 			children = (
 				355702F0253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift */,
 				355702F2253B011700F90B4F /* ContentView.swift */,
+				35A68D91253DF55300E75179 /* Home.swift */,
+				35B869BC253D9DBF0021B99A /* MenuView.swift */,
 				355702F4253B011B00F90B4F /* Assets.xcassets */,
 				355702F9253B011B00F90B4F /* Info.plist */,
 				355702F6253B011B00F90B4F /* Preview Content */,
@@ -264,6 +267,7 @@
 			files = (
 				355702F3253B011700F90B4F /* ContentView.swift in Sources */,
 				35B869BD253D9DBF0021B99A /* MenuView.swift in Sources */,
+				35A68D92253DF55300E75179 /* Home.swift in Sources */,
 				355702F1253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
