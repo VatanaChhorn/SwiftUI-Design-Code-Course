@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3514C49E2540287200972392 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3514C49D2540287200972392 /* HomeView.swift */; };
+		3514C4A3254046F300972392 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3514C4A2254046F300972392 /* UpdateList.swift */; };
 		355702F1253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355702F0253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift */; };
 		355702F3253B011700F90B4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355702F2253B011700F90B4F /* ContentView.swift */; };
 		355702F5253B011B00F90B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355702F4253B011B00F90B4F /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3514C49D2540287200972392 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3514C4A2254046F300972392 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		355702ED253B011700F90B4F /* SwiftUI Design Code Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Design Code Course.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		355702F0253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Design_Code_CourseApp.swift; sourceTree = "<group>"; };
 		355702F2253B011700F90B4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 		355702E4253B011700F90B4F = {
 			isa = PBXGroup;
 			children = (
+				3514C4A2254046F300972392 /* UpdateList.swift */,
 				355702EF253B011700F90B4F /* SwiftUI Design Code Course */,
 				35570301253B011C00F90B4F /* SwiftUI Design Code CourseTests */,
 				3557030C253B011C00F90B4F /* SwiftUI Design Code CourseUITests */,
@@ -102,6 +107,7 @@
 				355702F0253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift */,
 				355702F2253B011700F90B4F /* ContentView.swift */,
 				35A68D91253DF55300E75179 /* Home.swift */,
+				3514C49D2540287200972392 /* HomeView.swift */,
 				35B869BC253D9DBF0021B99A /* MenuView.swift */,
 				355702F4253B011B00F90B4F /* Assets.xcassets */,
 				355702F9253B011B00F90B4F /* Info.plist */,
@@ -267,7 +273,9 @@
 			files = (
 				355702F3253B011700F90B4F /* ContentView.swift in Sources */,
 				35B869BD253D9DBF0021B99A /* MenuView.swift in Sources */,
+				3514C4A3254046F300972392 /* UpdateList.swift in Sources */,
 				35A68D92253DF55300E75179 /* Home.swift in Sources */,
+				3514C49E2540287200972392 /* HomeView.swift in Sources */,
 				355702F1253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
