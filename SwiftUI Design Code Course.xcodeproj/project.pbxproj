@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		3514C49E2540287200972392 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3514C49D2540287200972392 /* HomeView.swift */; };
 		3514C4A3254046F300972392 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3514C4A2254046F300972392 /* UpdateList.swift */; };
+		355272B425417CD700B2B01C /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355272B325417CD700B2B01C /* TabBar.swift */; };
 		355702F1253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355702F0253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift */; };
 		355702F3253B011700F90B4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355702F2253B011700F90B4F /* ContentView.swift */; };
 		355702F5253B011B00F90B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355702F4253B011B00F90B4F /* Assets.xcassets */; };
 		355702F8253B011B00F90B4F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355702F7253B011B00F90B4F /* Preview Assets.xcassets */; };
 		35570303253B011C00F90B4F /* SwiftUI_Design_Code_CourseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35570302253B011C00F90B4F /* SwiftUI_Design_Code_CourseTests.swift */; };
 		3557030E253B011C00F90B4F /* SwiftUI_Design_Code_CourseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3557030D253B011C00F90B4F /* SwiftUI_Design_Code_CourseUITests.swift */; };
+		3560504425405D6600E9BAB2 /* UpdateDetial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560504325405D6600E9BAB2 /* UpdateDetial.swift */; };
+		3560504C2541684400E9BAB2 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560504B2541684300E9BAB2 /* UpdateStore.swift */; };
 		35A68D92253DF55300E75179 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A68D91253DF55300E75179 /* Home.swift */; };
 		35B869BD253D9DBF0021B99A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B869BC253D9DBF0021B99A /* MenuView.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +42,7 @@
 /* Begin PBXFileReference section */
 		3514C49D2540287200972392 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3514C4A2254046F300972392 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
+		355272B325417CD700B2B01C /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		355702ED253B011700F90B4F /* SwiftUI Design Code Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Design Code Course.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		355702F0253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Design_Code_CourseApp.swift; sourceTree = "<group>"; };
 		355702F2253B011700F90B4F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		35570309253B011C00F90B4F /* SwiftUI Design Code CourseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftUI Design Code CourseUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3557030D253B011C00F90B4F /* SwiftUI_Design_Code_CourseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_Design_Code_CourseUITests.swift; sourceTree = "<group>"; };
 		3557030F253B011C00F90B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3560504325405D6600E9BAB2 /* UpdateDetial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetial.swift; sourceTree = "<group>"; };
+		3560504B2541684300E9BAB2 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		35A68D91253DF55300E75179 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		35B869BC253D9DBF0021B99A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,7 +89,6 @@
 		355702E4253B011700F90B4F = {
 			isa = PBXGroup;
 			children = (
-				3514C4A2254046F300972392 /* UpdateList.swift */,
 				355702EF253B011700F90B4F /* SwiftUI Design Code Course */,
 				35570301253B011C00F90B4F /* SwiftUI Design Code CourseTests */,
 				3557030C253B011C00F90B4F /* SwiftUI Design Code CourseUITests */,
@@ -108,7 +113,11 @@
 				355702F2253B011700F90B4F /* ContentView.swift */,
 				35A68D91253DF55300E75179 /* Home.swift */,
 				3514C49D2540287200972392 /* HomeView.swift */,
+				3560504B2541684300E9BAB2 /* UpdateStore.swift */,
 				35B869BC253D9DBF0021B99A /* MenuView.swift */,
+				3514C4A2254046F300972392 /* UpdateList.swift */,
+				355272B325417CD700B2B01C /* TabBar.swift */,
+				3560504325405D6600E9BAB2 /* UpdateDetial.swift */,
 				355702F4253B011B00F90B4F /* Assets.xcassets */,
 				355702F9253B011B00F90B4F /* Info.plist */,
 				355702F6253B011B00F90B4F /* Preview Content */,
@@ -273,7 +282,10 @@
 			files = (
 				355702F3253B011700F90B4F /* ContentView.swift in Sources */,
 				35B869BD253D9DBF0021B99A /* MenuView.swift in Sources */,
+				355272B425417CD700B2B01C /* TabBar.swift in Sources */,
+				3560504425405D6600E9BAB2 /* UpdateDetial.swift in Sources */,
 				3514C4A3254046F300972392 /* UpdateList.swift in Sources */,
+				3560504C2541684400E9BAB2 /* UpdateStore.swift in Sources */,
 				35A68D92253DF55300E75179 /* Home.swift in Sources */,
 				3514C49E2540287200972392 /* HomeView.swift in Sources */,
 				355702F1253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift in Sources */,
