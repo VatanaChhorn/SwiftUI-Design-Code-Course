@@ -20,6 +20,8 @@
 		3560504C2541684400E9BAB2 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3560504B2541684300E9BAB2 /* UpdateStore.swift */; };
 		35A68D92253DF55300E75179 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A68D91253DF55300E75179 /* Home.swift */; };
 		35B869BD253D9DBF0021B99A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35B869BC253D9DBF0021B99A /* MenuView.swift */; };
+		35BFB1C12542A89F007E2CB4 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BFB1C02542A89F007E2CB4 /* RingView.swift */; };
+		35BFB1C62542BA98007E2CB4 /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BFB1C52542BA98007E2CB4 /* ShadowModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		3560504B2541684300E9BAB2 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		35A68D91253DF55300E75179 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		35B869BC253D9DBF0021B99A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		35BFB1C02542A89F007E2CB4 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
+		35BFB1C52542BA98007E2CB4 /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +113,9 @@
 		355702EF253B011700F90B4F /* SwiftUI Design Code Course */ = {
 			isa = PBXGroup;
 			children = (
+				35BFB1C52542BA98007E2CB4 /* ShadowModifier.swift */,
 				355702F0253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift */,
+				35BFB1C02542A89F007E2CB4 /* RingView.swift */,
 				355702F2253B011700F90B4F /* ContentView.swift */,
 				35A68D91253DF55300E75179 /* Home.swift */,
 				3514C49D2540287200972392 /* HomeView.swift */,
@@ -280,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35BFB1C12542A89F007E2CB4 /* RingView.swift in Sources */,
 				355702F3253B011700F90B4F /* ContentView.swift in Sources */,
 				35B869BD253D9DBF0021B99A /* MenuView.swift in Sources */,
 				355272B425417CD700B2B01C /* TabBar.swift in Sources */,
@@ -288,6 +295,7 @@
 				3560504C2541684400E9BAB2 /* UpdateStore.swift in Sources */,
 				35A68D92253DF55300E75179 /* Home.swift in Sources */,
 				3514C49E2540287200972392 /* HomeView.swift in Sources */,
+				35BFB1C62542BA98007E2CB4 /* ShadowModifier.swift in Sources */,
 				355702F1253B011700F90B4F /* SwiftUI_Design_Code_CourseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

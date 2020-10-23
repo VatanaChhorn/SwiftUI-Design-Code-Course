@@ -43,6 +43,12 @@ struct HomeView: View {
             } .padding(.horizontal)
             .padding(.top, 15)
             
+            ScrollView(.horizontal, showsIndicators: false) {
+                WatchRingVIew()
+                    .padding(.horizontal, 20)
+                    .padding(.bottom, 25)
+            }
+            
             ScrollView (.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(sectionData) { item in
@@ -135,3 +141,45 @@ let sectionData = [
 ]
 
 
+
+struct WatchRingVIew: View {
+    var body: some View {
+        HStack(spacing: 10.0) {
+            HStack(spacing: 10.0) {
+                RingView(color1: #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1), color2: #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1), width: 44, height: 44, percentage: 43, show: .constant(true))
+                
+                VStack(alignment: .leading, spacing: 4.0) {
+                    Text("4 Minutes Left")
+                        .font(.subheadline)
+                        .bold()
+                    
+                    Text("Watch 10 Minutes Today.")
+                        .font(.caption)
+                }
+                
+            } .padding(8)
+            .background(Color.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            
+            RingView(color1: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1), color2: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), width: 44, height: 44, percentage: 11, show: .constant(true))
+                .padding(8)
+                .background(Color.white)
+                .cornerRadius(20)
+                .modifier(ShadowModifier())
+            
+            
+            RingView(color1: #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1), color2: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1), width: 44, height: 44, percentage: 97, show: .constant(true))
+                .padding(8)
+                .background(Color.white)
+                .cornerRadius(20)
+                .modifier(ShadowModifier())
+            
+            RingView(color1: #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1), color2: #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1), width: 44, height: 44, percentage: 12, show: .constant(true))
+                .padding(8)
+                .background(Color.white)
+                .cornerRadius(20)
+                .modifier(ShadowModifier())
+        }
+    }
+}
